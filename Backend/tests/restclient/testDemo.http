@@ -1,0 +1,30 @@
+@host = http://localhost:3000
+
+### 
+# @name createProf
+POST {{host}}/api/prof/
+Content-Type: application/json
+
+{
+  "name": "Max",
+  "campusID": "test",
+  "password": "123",
+  "admin": false
+}
+
+### 
+@profId = {{createProf.response.body.id}}
+
+### 
+POST {{host}}/api/gebiet/
+Content-Type: application/json
+
+{
+  "name": "Data Science",
+  "beschreibung": "Beschreibung",
+  "public": true,
+  "verwalter": "{{profId}}"
+}
+
+###
+GET {{host}}/api/gebiet/alle

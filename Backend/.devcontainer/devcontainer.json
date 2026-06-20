@@ -1,0 +1,70 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
+{
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "registry.bht-berlin.de:443/templates/container/we:WS25c",
+	
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+	
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [ 2990, 3000, 3001, 3002, 3003, 3004, 3005, 3006, 3007, 3008, 3009, 3010, 3011 ],
+	
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "",
+
+	
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"-dbaeumer.vscode-eslint",
+				"-github.copilot",
+				"-github.copilot-chat",
+				"donjayamanne.githistory",
+				"firefox-devtools.vscode-firefox-debug",
+				"humao.rest-client",
+				"mikestead.dotenv",
+				"ms-vscode-remote.remote-containers",
+				"ms-vscode.extension-test-runner",
+				"ms-vscode.live-server",
+				"orta.vscode-jest",
+				"streetsidesoftware.code-spell-checker",
+				"streetsidesoftware.code-spell-checker-german",
+				"usernamehw.errorlens",
+				"vitest.explorer"
+			],
+			"settings": {
+				"chat.disableAIFeatures": true,
+				"chat.agent.enabled": false,
+				"chat.commandCenter.enabled": false,
+				"inlineChat.accessibleDiffView": "off",
+				"github.copilot.enable": { "*":false },
+				"cSpell.caseSensitive": false,
+				"cSpell.diagnosticLevel": "Hint",
+				"cSpell.language": "de-de,en",
+				"cSpell.languageSettings": [
+					{
+						"caseSensitive": false,
+						"languageId": "*",
+						"locale": "de,en"
+					}
+				],
+				"cSpell.ignoreRegExpList": [
+					"/\\\\[a-zA-Z]+\\b/g",
+					"/\\\\@[a-zA-Z]+\\b/g"
+				],
+				"dev.containers.defaultExtensions": [],
+				"workbench.tree.indent": 16,
+				"files.exclude": {
+					"**/.devcontainer": true,
+					"**/.git": true,
+					"**/.DS_Store": true,
+					"**/.DS Store": true
+				}
+			}
+		}
+	}
+	,"postStartCommand": "rm -rf /home/dev/.vscode-server/extensions/github.copilot* && clear && clear"
+}

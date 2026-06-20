@@ -1,0 +1,15 @@
+{
+    "chat.agent.enabled": false, "chat.commandCenter.enabled": false,"chat.disableAIFeatures": true,"inlineChat.accessibleDiffView": "off","terminal.integrated.initialHint": false,"github.copilot.enable": { "*": false },
+    "typescript.preferences.importModuleSpecifier": "relative",
+    "jest.runMode": {
+        "type": "on-save",
+        "testFileOnly": true,
+        "deferred": true
+    },
+    "jest.outputConfig": {
+        "revealOn": "demand",
+        "revealWithFocus": "none",
+        "clearOnRun": "none"
+    },
+    "testing.automaticallyOpenTestResults": "neverOpen"
+}
